@@ -4,33 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Calculator</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="download.jpeg" alt="University Logo" class="header-logo">
+
+    <header class="d-flex align-items-center p-3 bg-dark text-white">
+        <img src="download.jpeg" alt="University Logo" class="header-logo mr-3" style="height: 60px;">
         <h2>Sir Padampat Singhania University</h2>
     </header>   
-    <div class="container">
-        <h1>Attendance Calculator</h1>
-        <form id="attendance-form">
-            <label for="total">Total Classes:</label>
-            <input type="number" id="total" placeholder="Enter total classes" required>
 
-            <label for="present">Present Classes:</label>
-            <input type="number" id="present" placeholder="Enter attended classes" required>
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Main Content Area -->
+            <div class="col-md-8">
+                <h1>Attendance Calculator</h1>
+                <form id="attendance-form">
+                    <div class="form-group">
+                        <label for="total">Total Classes:</label>
+                        <input type="number" id="total" class="form-control" placeholder="Enter total classes" required>
+                    </div>
 
-            <label for="absent">Absent Classes:</label>
-            <input type="number" id="absent" placeholder="Enter absent classes" required>
+                    <div class="form-group">
+                        <label for="present">Present Classes:</label>
+                        <input type="number" id="present" class="form-control" placeholder="Enter attended classes" required>
+                    </div>
 
-            <label for="weekly-classes">Classes Per Week:</label>
-            <input type="number" id="weekly-classes" placeholder="Enter weekly classes" required>
+                    <div class="form-group">
+                        <label for="absent">Absent Classes:</label>
+                        <input type="number" id="absent" class="form-control" placeholder="Enter absent classes" required>
+                    </div>
 
-            <button type="button" onclick="calculateAttendance()">Calculate</button>
-        </form>
+                    <div class="form-group">
+                        <label for="weekly-classes">Classes Per Week:</label>
+                        <input type="number" id="weekly-classes" class="form-control" placeholder="Enter weekly classes" required>
+                    </div>
 
-        <div id="result"></div>
+                    <button type="button" class="btn btn-primary" onclick="calculateAttendance()">Calculate</button>
+                </form>
+
+                <!-- Empty Space for Ad, outside the form -->
+                <div class="ad-space bg-light p-4 text-center border mt-4">
+                    <h4></h4>
+                    <p></p>
+                    <!-- Replace with actual ad scripts if needed -->
+                </div>
+
+                <div id="result" class="mt-4"></div>
+            </div>
+
+            <!-- Optional Right Sidebar (If needed for more ads or information) -->
+            <div class="col-md-4">
+                <!-- Additional content or ads can go here -->
+            </div>
+        </div>
     </div>
+
+    <!-- Bootstrap JS and Popper.js (optional, if you need Bootstrap’s JavaScript features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="script.js"></script>
 </body>
