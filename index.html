@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="download.jpeg" alt="University Logo" class="header-logo">
+        <h2>Sir Padampat Singhania University</h2>
+    </header>   
+    <div class="container">
+        <h1>Attendance Calculator</h1>
+        <form id="attendance-form">
+            <label for="total">Total Classes:</label>
+            <input type="number" id="total" placeholder="Enter total classes" required>
+
+            <label for="present">Present Classes:</label>
+            <input type="number" id="present" placeholder="Enter attended classes" required>
+
+            <label for="absent">Absent Classes:</label>
+            <input type="number" id="absent" placeholder="Enter absent classes" required>
+
+            <label for="weekly-classes">Classes Per Week:</label>
+            <input type="number" id="weekly-classes" placeholder="Enter weekly classes" required>
+
+            <button type="button" onclick="calculateAttendance()">Calculate</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
