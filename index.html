@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Calculator</title>
     <!-- Bootstrap CDN -->
-
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional Media Queries for Mobile Responsiveness */
+        @media (max-width: 576px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+            header img {
+                margin-bottom: 10px;
+            }
+            header h2 {
+                font-size: 20px;
+            }
+            .ad-space {
+                margin-top: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -17,8 +36,8 @@
 
     <div class="container mt-5">
         <div class="row">
-            <!-- Main Content Area -->
-            <div class="col-md-8">
+            <!-- Main Content Area (Use col-12 for full width on mobile screens) -->
+            <div class="col-lg-8 col-md-12">
                 <h1>Attendance Calculator</h1>
                 <form id="attendance-form">
                     <div class="form-group">
@@ -46,8 +65,8 @@
 
                 <!-- Empty Space for Ad, outside the form -->
                 <div class="ad-space bg-light p-4 text-center border mt-4">
-                    <h4></h4>
-                    <p></p>
+                    <h4>Advertisement</h4>
+                    <p>Place your ad here!</p>
                     <!-- Replace with actual ad scripts if needed -->
                 </div>
 
@@ -55,7 +74,7 @@
             </div>
 
             <!-- Optional Right Sidebar (If needed for more ads or information) -->
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
                 <!-- Additional content or ads can go here -->
             </div>
         </div>
